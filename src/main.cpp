@@ -8,8 +8,6 @@ std::string FormatWithLeadingZeros(int number, int width){
     return numberText = std::string(leadingZeros, '0') +numberText;
 }
 
-
-
 int main(){
     
     Color pink = {255, 97, 202, 255};

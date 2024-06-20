@@ -1,7 +1,7 @@
 #include "alien.hpp"
 #include <raylib.h>
-Texture2D Alien::alienImages[3] = {};
 
+Texture2D Alien::alienImages[3] = {};
 
 Alien::Alien(int type, Vector2 position){
     this -> type = type;
