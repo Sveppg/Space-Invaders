@@ -53,7 +53,7 @@ int main(){
         game.Draw();
         EndDrawing();
     }
-
+    game.~Game();
     CloseWindow();   
     return 0;
 }
