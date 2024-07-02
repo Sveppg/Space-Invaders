@@ -9,3 +9,5 @@ I was bored so I build a Game known as Space Invaders, the original Idea was to 
 - raylib
 - g++ ver.13.0.0
 - Graphics and Fonts will be in the build folder
+
+Source for Space and Alien png -> "https://www.flaticon.com/free-icons/space-invaders" 
