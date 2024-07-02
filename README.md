@@ -1,7 +1,6 @@
 # Space-Invaders
 I was bored so I build a Game known as Space Invaders, the original Idea was to learn fundamental OOP principles.
-![image](https://github.com/Sveppg/Space-Invaders/assets/54738234/77b894ec-8722-46ea-85fa-fa93e65a1f0e)
-
+![image](https://github.com/Sveppg/Space-Invaders/assets/54738234/fc4f85a8-5f4f-4fad-ba75-2aad87c09ebe)
 
 ### Install Guide:
 ##### Requirements:
@@ -9,5 +8,4 @@ I was bored so I build a Game known as Space Invaders, the original Idea was to 
 - raylib
 - g++ ver.13.0.0
 - Graphics and Fonts will be in the build folder
-
-Source for Space and Alien png -> "https://www.flaticon.com/free-icons/space-invaders" 
+Font Source -> link: https://www.fontspace.com/graham-black-font-f118155
