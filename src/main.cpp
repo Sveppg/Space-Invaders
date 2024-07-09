@@ -57,7 +57,6 @@ int main(){
     }
     UnloadFont(font);
     UnloadTexture(spaceshipimage);
-    //game.~Game();
     CloseWindow();   
     return 0;
 }
