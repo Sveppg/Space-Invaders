@@ -55,7 +55,9 @@ int main(){
         game.Draw();
         EndDrawing();
     }
-    game.~Game();
+    UnloadFont(font);
+    UnloadTexture(spaceshipimage);
+    //game.~Game();
     CloseWindow();   
     return 0;
 }
