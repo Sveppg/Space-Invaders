@@ -21,21 +21,32 @@ file(GLOB_RECURSE MAIN
 add_executable(main ${MAIN})
 
 # Finde die raylib-Bibliothek, falls sie installiert ist
-find_package(raylib QUIET) # Wenn raylib über find_package verfügbar ist, nutze es
+find_package(raylib QUIET)
 
-if(NOT raylib_FOUND) # Falls raylib nicht gefunden wurde, benutze eine manuell definierte Methode
-    include_directories("/usr/include/raylib") # Pfad zu den raylib-Header-Dateien
-    link_directories("/usr/lib/raylib") # Pfad zum Ordner der raylib-Bibliothek
+if(NOT raylib_FOUND) 
+    include_directories("/usr/include/raylib") 
+    link_directories("/usr/lib/raylib") 
 endif()
 
-# Verlinke gegen die benötigten Libraries
-target_link_libraries(main
-    raylib
-    GL
-    m
-    pthread
-    dl
-    rt
-    X11
-)
-
+# Betriebssystem-spezifische Anpassungen
+if(APPLE) 
+    # macOS benötigt spezifische Frameworks für OpenGL und Fensterverwaltung
+    target_link_libraries(main
+        raylib
+        "-framework OpenGL"
+        "-framework Cocoa"  # macOS verwendet Cocoa für GUI-Elemente
+        "-framework IOKit"  # Für Hardware-Eingabe
+        "-framework CoreVideo"  # Für Videounterstützung
+    )
+elseif(UNIX)
+    # Linux-spezifische Libraries
+    target_link_libraries(main
+        raylib
+        GL
+        m
+        pthread
+        dl
+        rt
+        X11
+    )
+endif()
